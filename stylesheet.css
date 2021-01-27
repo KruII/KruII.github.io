@@ -43,6 +43,14 @@ h1 {
 	font-size: 3vh;
 	filter: drop-shadow(0 0 0.15rem black);
 }
+#headertext3 {
+	height: auto;
+	width: 100%;
+	text-align: center;
+	float: right;
+	font-size: 4.5vh;
+	filter: drop-shadow(0 0 0.15rem black);
+}
 /*
 #header {
 	
@@ -80,9 +88,9 @@ h1 {
 }
 */
 #navbar {
-  overflow: hidden;
-  background-color: #333;
-  border-bottom:solid 0.2vh #242020a3;
+	overflow: hidden;
+	background-color: #333;
+	border-bottom: solid 0.2vh #242020a3;
 }
 #navbar a {
   float: left;
@@ -116,24 +124,12 @@ h1 {
       text-align: center;
       padding: 2vh 2vh;
       text-decoration: none;
-      font-size: 11px;
+      font-size: 1.6vh;
       transition-property:background-color,;
       transition-duration:2s;
   }
 }
-@media only screen and (max-width: 340px) {
-  #navbar a {
-      float: left;
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 2vh 2vh;
-      text-decoration: none;
-      font-size: 10px;
-      transition-property:background-color,;
-      transition-duration:2s;
-  }
-}
+
 @keyframes animation {
 	0% {border: dotted 0.5vh red;color: red;}
     15% {border: dotted 0.5vh orange;color: orange;}
@@ -188,4 +184,42 @@ h1 {
 	font-size: 50px;
 	text-align: center;
 }
+.Info {
+	color: white;
+	font-size:3vh;
+	text-align:left;
+	padding:2vh
+}
+.zwijanie {
+	background-color: #333;
+	color: white;
+	cursor: pointer;
+	padding: 2vh 2vh;
+	width: 100%;
+	border: none;
+	text-align: center;
+	outline: none;
+	font-size: 1.6vh;
+	transition-property: background-color,;
+	transition-duration: 2s;
+}
 
+.active, .zwijanie:hover {
+	background-color: #555;
+}
+.zwijanie:after {
+	content: '\002B';
+	color: white;
+	font-weight: bold;
+	float: right;
+	margin-left: 1vh;
+}
+.active:after {
+	content: "\2212";
+}
+.zawartosc {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	background-color: #f1f1f1;
+}
