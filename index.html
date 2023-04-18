@@ -5,79 +5,25 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href="index.ico" type="image/x-icon">
-	<link rel="shortcut icon" href="index.ico" type="image/x-icon">
+	<!--<link rel="icon" href="index.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="index.ico" type="image/x-icon">-->
 	<link rel="stylesheet" href="stylesheet.css">
-	<style>
-		::-webkit-scrollbar {
-			width: 0.7vh;
-		}
-		::-webkit-scrollbar-track {
-			box-shadow: inset 0 0 5vh #303030;
-		}
-        ::-webkit-scrollbar-thumb {
-            background: #0E0E0E;
-            border-radius: 1vh;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-                background: #030303;
-        }
-	</style>
-
+	<link rel="stylesheet" href="special.css">
 </head>
 <body>
 	<header>
-		<div class="header1">
-			<div class="header2">
-				<div id="headertext1">
-
-					<h1>Witaj na mojej stronie!</h1>
-
-				</div>
-				<div id="headertext3">
-					Co znajdziesz:
-				</div>
-				<div id="headertext2">
-					<ul>
-						<li>
-							Aplikację <br />I Programy
-						</li>
-						<li>
-							Skrypty
-						</li>
-						<li>
-							Poradniki
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-
+		<h1 class="header">Moje Portfolio</h1>
 	</header>
-	<a name="home"></a>
-	<div id="navbar">
-		<a class="active" href="#home">Strona Startowa</a>
-		<a href="news.html#home">Nowości</a>
-		<a href="apk.html#home">Aplikacje I Programy</a>
-		<a href="scripts.html#home">Skrypty</a>
-		<a href="tutorial.html#home">Poradniki</a>
-		<button class="zwijanie">Menu</button>
-		<div class="zawartosc">
-			<p><a class="active" href="#home">Strona Startowa</a></p>
-			<p><a href="news.html#home">Nowości</a></p>
-			<p><a href="apk.html#home">Aplikacje I Programy</a></p>
-			<p><a href="scripts.html#home">Skrypty</a></p>
-			<p><a href="tutorial.html#home">Poradniki</a></p>
-		</div>
-	</div>
-
-	<script type="text/javascript" src="navbar.js">
-	</script>
-	<script type="text/javascript" src="collapsible.js">
-	</script>
-
-
-
+  	<div class="container">
+    
+    <div class="nav-buttons">
+      <button onclick="showInfo()">Informacje</button>
+      <button onclick="showContact()">Kontakt</button>
+      <button onclick="showSkills()">Umiejętności</button>
+      <button onclick="showInterests()">Zainteresowania</button>
+    </div>
+    <div id="output" class="output"></div>
+    <script src="script.js"></script>
+  </div>
 </body>
-
 </html>

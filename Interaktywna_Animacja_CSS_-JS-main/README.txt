@@ -1,1 +1,0 @@
-Program działa poprawnie na Microsoft Edge

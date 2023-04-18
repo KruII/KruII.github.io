@@ -1,225 +1,35 @@
+::-webkit-scrollbar {
+	width: 0.7vh;
+}
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5vh #303030;
+}
+::-webkit-scrollbar-thumb {
+	background: #0E0E0E;
+	border-radius: 1vh;
+}
+::-webkit-scrollbar-thumb:hover {
+		background: #030303;
+}
+
+@font-face {
+	font-family: 'Equalizer';
+	src: url('395Equalizer.ttf') format('truetype');
+}
+
 body {
-  background-color: #303030;
-  color: aqua;
-  margin: auto;
+	margin: 0;
+	padding: 0;
+	background-color: #303030;
 }
-a:link, a:visited {
-  color: aqua;
-  text-decoration: none;
-}
-h1 {
-	font-size: 5vh;
-	font-family:Gill Sans, sans-serif;
-}
-.header1 {
-	height: 100vh;
+
+header {
+	height: 40vh;
 	width: 100%;
-	border-bottom:dashed 1vh #242020a3;
-}
-.header2 {
-	height: 100vh;
-	width: 100%;
-	background: linear-gradient(rgba(115, 125, 122, 0.8),rgba(10, 69, 67, 0.6)),
-	url("../img/background.png") no-repeat center center;
-	background-size: cover;
-	align-items: center;
-	color: white;
-}
-#headertext1 {
-	height: auto;
-	width: 100%;
-	text-align: center;
-	float: right;
-	margin-top: 25vh;
-	filter: drop-shadow(0 0 0.15rem black);
-}
-#headertext2 {
-	height: auto;
-	width: 100%;
-	text-align: center;
-	flex-direction: row;
-	justify-content: center;
+	background-color: #101010;
+	color: rgb(74, 202, 52);
 	display: flex;
-	font-size: 3vh;
-	filter: drop-shadow(0 0 0.15rem black);
-}
-#headertext3 {
-	height: auto;
-	width: 100%;
-	text-align: center;
-	float: right;
-	font-size: 4.5vh;
-	filter: drop-shadow(0 0 0.15rem black);
-}
-/*
-#header {
-	
-}
-.zegar {
-  font-size: 36px;
-}
-#txt {
-  text-align: center;
-  margin-right: 20px;
-  float:right;
-  width:150px;
-  border:3px dashed green;
-}
-#strona {
-  text-align: center;
-  margin-left: 20px;
-  float:left;
-  width:190px;
-  border:3px dashed green;
-}
-
-.przejscie {
-  width:5vh;
-  height:0vh;
-  background-color:black;
-  transition-property:height , background-color,;
-  transition-duration:1s, 0s;
-  transition-delay:0s, 0s;
-}
-
-.przejscie:hover {
-  height:8vh;
-  background-color:#0080ff;
-}
-*/
-#navbar {
-	overflow: hidden;
-	background-color: #333;
-	border-bottom: solid 0.2vh #242020a3;
-}
-#navbar a {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 2vh 2vh;
-  text-decoration: none;
-  font-size: 1.6vh;
-  transition-property:background-color,;
-  transition-duration:2s;
-}
-#navbar a:hover {
-  background-color:#0080ff;
-}
-
-#navbar a.active {
-  background-color: #4CAF50;
-  color: white;
-}
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-@media only screen and (max-width: 420px) {
-  #navbar a {
-      float: left;
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 2vh 2vh;
-      text-decoration: none;
-      font-size: 1.6vh;
-      transition-property:background-color,;
-      transition-duration:2s;
-  }
-}
-
-@keyframes animation {
-	0% {border: dotted 0.5vh red;color: red;}
-    15% {border: dotted 0.5vh orange;color: orange;}
-    30% {border: dotted 0.5vh yellow;color: yellow;}
-    45% {border: dotted 0.5vh green;color: green;}
-    60% {border: dotted 0.5vh blue;color: blue;}
-    75% {border: dotted 0.5vh darkblue;color: darkblue;}
-    90% {border: dotted 0.5vh purple;color: purple;}
-    100% {border: dotted 0.5vh red;color: red;}
-
-}
-#scrollbar {
-	margin: auto;
-	margin-top: 5vh;
-	margin-bottom: 5vh;
-	width: 80%; 
-	height: 90vh; 
-	overflow-y: scroll; 
-	overflow-x: hidden; 
-	border:1px solid #000;
-	background-color: whitesmoke;
-	font-size: 30px;
-	color: black;
-	text-align: center;
-}
-#scrollbar h1 {
-	margin: auto; 
-	font-size: 60px;
-	color: black;
-	text-align: center;
-	font-family:Noto Sans, serif;
-
-}
-
-.news {
-	margin:auto;
-	
-}
-#news {
-	margin:auto;
-	border: dotted 0.5vh  red;
-	font-size: 30px;
-	width: 90%;
-	color: whitesmoke;
-	border-radius: 16px;
-	animation-name: animation;
-	animation-iteration-count: infinite;
-	animation-duration: 4s;
-	margin-bottom: 1vh;
-}
-#news h1 {
-	font-size: 50px;
-	text-align: center;
-}
-.Info {
-	color: white;
-	font-size:3vh;
-	text-align:left;
-	padding:2vh
-}
-.zwijanie {
-	background-color: #333;
-	color: white;
-	cursor: pointer;
-	padding: 2vh 2vh;
-	width: 100%;
-	border: none;
-	text-align: center;
-	outline: none;
-	font-size: 1.6vh;
-	transition-property: background-color,;
-	transition-duration: 2s;
-}
-
-.active, .zwijanie:hover {
-	background-color: #555;
-}
-.zwijanie:after {
-	content: '\002B';
-	color: white;
-	font-weight: bold;
-	float: right;
-	margin-left: 1vh;
-}
-.active:after {
-	content: "\2212";
-}
-.zawartosc {
-	max-height: 0;
-	overflow: hidden;
-	transition: max-height 0.2s ease-out;
-	background-color: #f1f1f1;
+	align-items: center;
+	justify-content: center;
+	font-family: Equalizer;
 }
