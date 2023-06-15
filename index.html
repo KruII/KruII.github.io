@@ -9,21 +9,30 @@
 	<link rel="shortcut icon" href="index.ico" type="image/x-icon">-->
 	<link rel="stylesheet" href="stylesheet.css">
 	<link rel="stylesheet" href="special.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
-<body>
-	<header>
-		<h1 class="header">Moje Portfolio</h1>
-	</header>
-  	<div class="container">
-    
-    <div class="nav-buttons">
-      <button onclick="showInfo()">Informacje</button>
-      <button onclick="showContact()">Kontakt</button>
-      <button onclick="showSkills()">Umiejętności</button>
-      <button onclick="showInterests()">Zainteresowania</button>
-    </div>
-    <div id="output" class="output"></div>
-    <script src="script.js"></script>
-  </div>
+<body class="dark-theme">
+	<div id="MainPanel">
+		<header id="MainHeader">
+			<h1 class="header" id="HeaderText">Moje Portfolio</h1>
+		</header>
+		<div class="nav-buttons">
+			<a href="javascript: showInfo()">Informacje</a>
+			<a href="javascript: showContact()">Kontakt</a>
+			<a href="javascript: showSkills()">Umiejętności</a>
+			<a href="javascript: showInterests()">Zainteresowania</a>
+		</div>
+		<div id="output" class="output"></div>
+		<script src="script.js"></script>
+
+	</div>
+	<div id="LeftPanel">
+		<div class="sizer">▶</div>
+		
+	</div>
+	<div id="RightPanel">
+		<div class="sizer">◀</div>
+	</div>
+  	
 </body>
 </html>

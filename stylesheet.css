@@ -1,3 +1,18 @@
+:root{
+	.dark-theme{
+        --bg-color: #333;
+        --nav-bar-color: #15121b;
+        --nav-search-bar-color: #111;
+        --black: black;
+        --font-color: white;
+        --bottom-nav-color: #1d1825;
+        --main-background-color: #0b0b0b;
+        --border-settings: white;
+    }
+
+	--font-nav-button: 20px;
+}
+
 ::-webkit-scrollbar {
 	width: 0.7vh;
 }
@@ -21,15 +36,112 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: #303030;
+	display: flex;
+	min-width: 700px;
+}
+
+a{
+	color: #000000;
+	text-decoration: none;
+}
+a:hover{
+	color: #000000;
 }
 
 header {
-	height: 40vh;
+	top:0;
+	height: 10vh;
 	width: 100%;
-	background-color: #101010;
+	background-color: var(--nav-bar-color);
 	color: rgb(74, 202, 52);
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	font-family: Equalizer;
 }
+
+#LeftPanel{
+	order: 1;
+	top:0;
+	height: 100vh;
+	color: #000000;
+	display: block;
+	white-space: nowrap; /* Zapobiega zawijaniu tekstu */
+    overflow: hidden; /* Ukrywa nadmiarowy tekst */
+    text-overflow: ellipsis;
+    text-align: center;
+	color: white;
+    vertical-align: middle;
+	font-size: 14px;
+    line-height: calc(100vh - 100px);
+}
+#LeftPanel.active🔓{
+	width: 30%;
+}
+#LeftPanel.active🔒{
+	width: 0%;
+}
+
+#MainPanel{
+	display: block;
+	order: 2;
+	width: 99%;
+}
+
+.nav-buttons{
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--bottom-nav-color);
+	height: 5vh;
+}
+
+.nav-buttons a {
+	flex-basis: calc(25% - 8px);
+	flex-grow: 0;
+	flex-shrink: 0;
+	aspect-ratio: 1/1;
+	background-color: var(--bottom-nav-color);
+	box-shadow: inset 5px 5px 10px var(--nav-bar-color);
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: var(--nav-bar-color) 5px solid;
+	font-size: var(--font-nav-button);
+	font-family: Equalizer;
+	color: black;
+}
+
+.output{
+	background-color: var(--main-background-color);
+	height: 85%;
+}
+
+#RightPanel{
+	order: 3;
+	top:0;
+	height: 100vh;
+	color: #000000;
+	display: block;
+	white-space: nowrap; /* Zapobiega zawijaniu tekstu */
+    overflow: hidden; /* Ukrywa nadmiarowy tekst */
+    text-overflow: ellipsis;
+    text-align: center;
+	color: white;
+    vertical-align: middle;
+	font-size: 14px;
+    line-height: calc(100vh - 100px);
+}
+#RightPanel.active🔓 span{
+	width: 30%;
+}
+#RightPanel.active🔒 span{
+	width: 0%;
+}
+
+.sizer{
+	width: 10px;
+	height: 100%;
+	background-color: var(--nav-bar-color);
+}
+
