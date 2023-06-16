@@ -38,6 +38,7 @@ body {
 	background-color: #303030;
 	display: flex;
 	min-width: 700px;
+	user-select: none;
 }
 
 a{
@@ -74,12 +75,22 @@ header {
     vertical-align: middle;
 	font-size: 14px;
     line-height: calc(100vh - 100px);
+	display: flex;
+  	justify-content: flex-end;
+	background-color: var(--main-background-color);
+	width: 10px;
+	min-width: 10px;
 }
 #LeftPanel.active🔓{
-	width: 30%;
+	width: 25%;
+	animation: RoPanel 0.5s linear;
 }
 #LeftPanel.active🔒{
-	width: 0%;
+	width: 10px;
+	animation: ZmPanel 0.5s linear;
+}
+#LeftPanel:hover{
+	cursor: pointer;
 }
 
 #MainPanel{
@@ -114,7 +125,7 @@ header {
 
 .output{
 	background-color: var(--main-background-color);
-	height: 85%;
+	height: calc(85% - 10px);
 }
 
 #RightPanel{
@@ -131,12 +142,20 @@ header {
     vertical-align: middle;
 	font-size: 14px;
     line-height: calc(100vh - 100px);
+	background-color: var(--main-background-color);
+	width: 10px;
+	min-width: 10px;
 }
-#RightPanel.active🔓 span{
-	width: 30%;
+#RightPanel.active🔓{
+	width: 25%;
+	animation: RoPanel 0.5s linear;
 }
-#RightPanel.active🔒 span{
-	width: 0%;
+#RightPanel.active🔒{
+	width: 10px;
+	animation: ZmPanel 0.5s linear;
+}
+#RightPanel:hover{
+	cursor: pointer;
 }
 
 .sizer{
@@ -145,3 +164,34 @@ header {
 	background-color: var(--nav-bar-color);
 }
 
+@keyframes RoPanel {
+	from{
+		width:10px;
+	}to{
+		width: 25%;
+	}
+}
+@keyframes ZmPanel {
+	from{
+		width: 25%;
+	}to{
+		width: 10px;
+	}
+}
+
+#footer{
+	height: 10px;
+
+}
+
+#footer:hover{
+	height: 100px;
+}
+
+#footer:hover ~ #output{
+	height: 100px;
+}
+
+#footer:hover::after {
+	content: "Tekst po najechaniu!";
+}

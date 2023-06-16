@@ -16,8 +16,6 @@ function showInterests() {
 
 const HeaderT = document.getElementById('HeaderText');
 
-HeaderW("Moja Stronka");
-
 function HeaderW(HeaderWord){
   HeaderT.innerHTML = '';
   for (let i = 0; i < HeaderWord.length; i++) {
@@ -25,4 +23,4 @@ function HeaderW(HeaderWord){
       HeaderT.innerHTML += HeaderWord[i];
     }, i *100)
   }
-}
+};

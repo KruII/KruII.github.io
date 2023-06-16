@@ -17,22 +17,25 @@
 			<h1 class="header" id="HeaderText">Moje Portfolio</h1>
 		</header>
 		<div class="nav-buttons">
-			<a href="javascript: showInfo()">Informacje</a>
-			<a href="javascript: showContact()">Kontakt</a>
-			<a href="javascript: showSkills()">Umiejętności</a>
-			<a href="javascript: showInterests()">Zainteresowania</a>
+			<a href="javascript: showInfo()" id="infoBu">Informacje</a>
+			<a href="javascript: showContact()" id="contBu">Kontakt</a>
+			<a href="javascript: showSkills()" id="skillBu">Umiejętności</a>
+			<a href="javascript: showInterests()" id="projBu">Zainteresowania</a>
 		</div>
 		<div id="output" class="output"></div>
 		<script src="script.js"></script>
-
+		<footer id="footer" role="contentinfo">
+			<span></span>
+		</footer>
 	</div>
 	<div id="LeftPanel">
-		<div class="sizer">▶</div>
-		
+		<div class="sizer" onclick="javascript: startL()" id="LSiz">▶</div>
+		<script src="leftPanel.js"></script>
 	</div>
 	<div id="RightPanel">
-		<div class="sizer">◀</div>
+		<div class="sizer" onclick="javascript: startR()" id="RSiz">◀</div>
+		<script src="rightPanel.js"></script>
 	</div>
-  	
+	<script src="langue.js"></script>
 </body>
 </html>
