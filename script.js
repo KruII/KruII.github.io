@@ -24,3 +24,31 @@ function HeaderW(HeaderWord){
     }, i *100)
   }
 };
+
+const footer = document.getElementById('footer');
+var mouse_boolean = false;
+var intervalId; // Zmienna przechowująca ID interwału
+
+footer.addEventListener('mouseover', function() {
+  mouse_boolean = true;
+  clearInterval(intervalId);
+  intervalId = setInterval(function() {
+    if (mouse_boolean && footer.offsetHeight < 100) {
+      footer.style.height = footer.offsetHeight + 1 + 'px';
+    } else {
+      clearInterval(intervalId);
+    }
+  }, 5); // Opóźnienie 0,5 sekundy
+});
+
+footer.addEventListener('mouseout', function() {
+  mouse_boolean = false;
+  clearInterval(intervalId);
+  intervalId = setInterval(function() {
+    if (!mouse_boolean && footer.offsetHeight > 10) {
+      footer.style.height = footer.offsetHeight - 1 + 'px';
+    } else {
+      clearInterval(intervalId);
+    }
+  }, 5); // Opóźnienie 0,5 sekundy
+});

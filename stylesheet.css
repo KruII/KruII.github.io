@@ -14,17 +14,17 @@
 }
 
 ::-webkit-scrollbar {
-	width: 0.7vh;
+	height: 10px;
 }
 ::-webkit-scrollbar-track {
-	box-shadow: inset 0 0 5vh #303030;
+	background-color: var(--main-background-color);
 }
 ::-webkit-scrollbar-thumb {
-	background: #0E0E0E;
+	background: var(--nav-bar-color);
 	border-radius: 1vh;
 }
 ::-webkit-scrollbar-thumb:hover {
-		background: #030303;
+	background: var(--bottom-nav-color);
 }
 
 @font-face {
@@ -96,7 +96,7 @@ header {
 #MainPanel{
 	display: block;
 	order: 2;
-	width: 99%;
+	width: calc(100% - 0px);
 }
 
 .nav-buttons{
@@ -181,17 +181,36 @@ header {
 
 #footer{
 	height: 10px;
-
+    position: absolute;
+    width: calc(100vw);
+	min-width: 700px;
+    bottom:0px;
+	left: 0;
+    background-color: var(--nav-bar-color);
+	overflow: hidden !important;
+	display: flex !important;
 }
 
-#footer:hover{
-	height: 100px;
+#footer span{
+	visibility: visible !important;
+	width: 100%;
+	background-color: var(--main-background-color);
+	margin-top: 10px !important;
+	text-align: center !important;
+	vertical-align: middle;
+	line-height: 90px;
+	
 }
 
-#footer:hover ~ #output{
-	height: 100px;
+@media (max-width: 699px) {
+	#RightPanel{
+		height: calc(100vh - 10px);
+	}
+	#LeftPanel{
+		height: calc(100vh - 10px);
+	}
 }
 
-#footer:hover::after {
+/*#footer:hover span::after {
 	content: "Tekst po najechaniu!";
-}
+}*/
