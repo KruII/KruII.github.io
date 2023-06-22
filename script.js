@@ -3,7 +3,7 @@ function showInfo() {
 }
 
 function showContact() {
-  document.getElementById('output').innerHTML = 'Możesz się ze mną skontaktować pod adresem e-mail: example@example.com';
+  document.getElementById('output').innerHTML = 'Możesz się ze mną skontaktować pod adresem e-mail: kacperdobrowolski0.0@gmail.com';
 }
 
 function showSkills() {
@@ -52,3 +52,7 @@ footer.addEventListener('mouseout', function() {
     }
   }, 5); // Opóźnienie 0,5 sekundy
 });
+
+function copyText(text){
+  navigator.clipboard.writeText(text)
+}

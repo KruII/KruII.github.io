@@ -8,6 +8,7 @@
         --bottom-nav-color: #1d1825;
         --main-background-color: #0b0b0b;
         --border-settings: white;
+		--footer-text-color: gold;
     }
 
 	--font-nav-button: 20px;
@@ -193,13 +194,23 @@ header {
 
 #footer span{
 	visibility: visible !important;
-	width: 100%;
+	width: 50%;
 	background-color: var(--main-background-color);
 	margin-top: 10px !important;
 	text-align: center !important;
 	vertical-align: middle;
 	line-height: 90px;
-	
+	color: var(--footer-text-color);
+}
+#footer span span{
+	width: 50%;
+	font-size: 24px;
+}
+#footer span span i{
+	margin: 10px;
+}
+#footer span span i:hover{
+	cursor: pointer;
 }
 
 @media (max-width: 699px) {
