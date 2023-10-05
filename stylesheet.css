@@ -225,3 +225,27 @@ header {
 /*#footer:hover span::after {
 	content: "Tekst po najechaniu!";
 }*/
+
+.output div {
+	margin: 0;
+	padding: 0;
+}
+
+.output h2 {
+	margin: 0;
+	padding: 0;
+}
+
+.progress {
+    background: #e0e0e0;
+    height: 20px;
+    width: 50vh;
+    margin: 10px 0;
+}
+
+.progress-bar {
+    background: rgb(74, 202, 52);
+    height: 100%;
+    line-height: 20px;
+    text-align: center;
+}

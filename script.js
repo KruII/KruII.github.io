@@ -6,10 +6,10 @@ function showContact() {
   document.getElementById('output').innerHTML = 'Możesz się ze mną skontaktować pod adresem e-mail: kacperdobrowolski0.0@gmail.com';
 }
 
-function showSkills() {
+/*function showSkills() {
   document.getElementById('output').innerHTML = 'Moje umiejętności to: HTML, CSS, JavaScript, itd.';
 }
-
+*/
 function showInterests() {
   document.getElementById('output').innerHTML = 'Moje zainteresowania to: programowanie, podróże, sport, itd.';
 }
