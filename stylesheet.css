@@ -127,6 +127,8 @@ header {
 .output{
 	background-color: var(--main-background-color);
 	height: calc(85% - 10px);
+	max-height: calc(85% - 10px);
+	overflow-y: auto;
 }
 
 #RightPanel{
@@ -236,6 +238,11 @@ header {
 	padding: 0;
 }
 
+.output p {
+	margin: 0;
+	padding: 0;
+}
+
 .progress {
     background: #e0e0e0;
     height: 20px;
@@ -248,4 +255,63 @@ header {
     height: 100%;
     line-height: 20px;
     text-align: center;
+}
+
+.project-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #e8eef1;
+    border-radius: 5px;
+}
+
+.project-item {
+    border: 1px solid #d1d9e0;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s;
+}
+
+.project-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-item h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.project-item p {
+    color: #666;
+}
+
+.project-item a {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #0077b6;
+    border-radius: 3px;
+    background-color: #e8eef1;
+    transition: background-color 0.3s;
+}
+
+.project-item a:hover {
+    background-color: #d1d9e0;
+}
+
+.languages-bar {
+    display: flex;
+    height: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.language {
+    height: 100%;
 }
